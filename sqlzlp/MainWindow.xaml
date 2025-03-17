@@ -1,0 +1,36 @@
+﻿<Window x:Class="sqlzlp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sqlzlp"
+        mc:Ignorable="d"
+        Title="CollegeInfo" Height="600" Width="800" WindowStartupLocation="CenterScreen"
+        Icon="/ktk.jpg">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="panelgrid" Background="Aqua">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                <Button x:Name="stud_btn" Style="{StaticResource ButtonStyle}" Content="Студенты" Margin="10" Click="stud_btn_Click" />
+                <Button x:Name="teach_btn" Style="{StaticResource ButtonStyle}" Content="Преподаватели" Click="teach_btn_Click" Margin="10" />
+                <Button x:Name="sub_btn" Style="{StaticResource ButtonStyle}" Content="Предметы" Click="sub_btn_Click" Margin="10" />
+            </StackPanel>
+           
+           
+
+
+        </Grid>
+        <Frame x:Name="mainframe" Grid.Column="1" NavigationUIVisibility="Hidden" Navigated="mainframe_Navigated" Margin="0,0,0,10"  />
+    </Grid>
+</Window>
